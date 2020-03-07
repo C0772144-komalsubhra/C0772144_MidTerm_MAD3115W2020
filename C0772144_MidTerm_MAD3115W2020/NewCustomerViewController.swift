@@ -46,6 +46,33 @@ class NewCustomerViewController: UIViewController {
           let c=Customer(customerId: "fg", firstName: firstName, lastName: lastName,  emailAddress:email,Dob:strDate,gender: .FEMALE)
             SingletonClass.getInstance().addCustomer(customer: c)
         }
-        
+      
+            
+            func validate(){
+                guard let username = txtFirstName.text else{
+                       showAlertBox(msg: "Please enter firstname")
+                return
+                }
+                if username.isEmpty{
+                    showAlertBox(msg: "Please enter firstname")}
+                
+                guard let lastname = txtLastName.text else{
+                       showAlertBox(msg: "Please enter lastname")
+                return
+                }
+                if lastname.isEmpty{
+                    showAlertBox(msg: "Please enter lastname")}
+                
+                guard let email = txtEmailId.text else{
+                       showAlertBox(msg: "Please enter emailId")
+                return
+                }
+                if email.isEmpty{
+                    showAlertBox(msg: "Please enter emailID")}
+                if email.isEmailValid(email:email)==false{
+                    showAlertBox(msg: "Please enter valid emailID")
+                }
+            }
+                
     
 }
