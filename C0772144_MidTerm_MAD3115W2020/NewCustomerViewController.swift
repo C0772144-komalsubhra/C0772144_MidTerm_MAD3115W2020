@@ -38,7 +38,14 @@ class NewCustomerViewController: UIViewController {
           //print(strDate)
       }
     
-
+    @IBAction func btnSave(_ sender: UIButton) {
+            validate()
+            let firstName = self.txtFirstName.text!
+            let lastName = self.txtLastName.text!
+            let email = self.txtEmailId.text!
+          let c=Customer(customerId: "fg", firstName: firstName, lastName: lastName,  emailAddress:email,Dob:strDate,gender: .FEMALE)
+            SingletonClass.getInstance().addCustomer(customer: c)
+        }
+        
     
-
 }
