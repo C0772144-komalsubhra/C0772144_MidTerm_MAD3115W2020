@@ -9,5 +9,8 @@
 import UIKit
 
 extension String{
- 
+ func getAllCustomers() -> [Customer]{
+       return Array(customerList.values)
+   }
+
 }
