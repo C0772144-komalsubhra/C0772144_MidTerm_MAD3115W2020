@@ -14,6 +14,14 @@ class SingletonClass{
       private lazy var customerList: [String: Customer] = [:]
 
      
+     
+
+        private init(){}
+
+        static func getInstance() -> SingletonClass
+        {
+            return instance
+        }
        
 
 }
