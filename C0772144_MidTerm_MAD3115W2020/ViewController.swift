@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     @IBAction func signUpBtn(_ sender: UIButton) {
            
        }
+    @IBAction func loginBtn(_ sender: UIButton) {
+    }
+    
     
 
     /*
