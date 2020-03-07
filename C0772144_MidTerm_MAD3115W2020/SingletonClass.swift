@@ -30,5 +30,14 @@ class SingletonClass{
   func getAllCustomers() -> [Customer]{
         return Array(customerList.values)
     }
-  
+ 
+    func loadData()
+    {
+        
+        customerList.updateValue(Customer(customerId: "KS", firstName: "Komal", lastName: "Subhra", emailAddress: "komal@gmail.com",Dob:"20/09/1993",gender: .FEMALE), forKey: "KS")
+         customerList.updateValue(Customer(customerId: "GG", firstName: "Geet", lastName: "Gupta", emailAddress: "geet@mail.com",Dob:"05/05/1996",gender: .FEMALE), forKey: "GG")
+   
+        
+        
+    }
 }
