@@ -22,6 +22,10 @@ class SingletonClass{
         {
             return instance
         }
-       
-
+  
+     func addCustomer(customer: Customer)
+     {
+         self.customerList.updateValue(customer, forKey: customer.customerId)
+     }
+  
 }
