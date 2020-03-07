@@ -27,5 +27,8 @@ class SingletonClass{
      {
          self.customerList.updateValue(customer, forKey: customer.customerId)
      }
+  func getAllCustomers() -> [Customer]{
+        return Array(customerList.values)
+    }
   
 }
