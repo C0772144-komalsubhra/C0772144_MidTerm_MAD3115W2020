@@ -10,7 +10,10 @@ import UIKit
 
 class SingletonClass{
 
-    
+     private static let instance = SingletonClass()
+      private lazy var customerList: [String: Customer] = [:]
+
+     
        
 
 }
