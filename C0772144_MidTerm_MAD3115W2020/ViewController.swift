@@ -41,6 +41,15 @@ class ViewController: UIViewController {
                 if flag==true
                 {
                     setRememberMe()
+                    
+        }
+                    func showAlertBox(msg : String)  {
+                        let alert = UIAlertController(title: "Error", message:
+                            msg, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                        
+                        self.present(alert, animated: true)
+                    }
                              // let storyboard = UIStoryboard(name: "Main", bundle: nil)
                               //let vc = storyboard.instantiateViewController(withIdentifier: "customersVC") as! CustomersViewController
                                                                  
