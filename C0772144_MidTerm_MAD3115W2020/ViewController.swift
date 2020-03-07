@@ -35,6 +35,11 @@ class ViewController: UIViewController {
                       showAlertBox(msg: "enter password")
                return
                }
+        if password.isEmpty{
+                  showAlertBox(msg: "Please enter password")}
+              readPlist(users:username,pwd:password)
+                if flag==true
+                {
     }
     
     
