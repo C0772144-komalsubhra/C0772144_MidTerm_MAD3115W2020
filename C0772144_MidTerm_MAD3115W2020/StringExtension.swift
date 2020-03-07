@@ -14,7 +14,11 @@ extension String{
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: email)
         }
-    
+    func mobileValid() -> Bool{
+          let mobileNumberRegEx = "[0-9]{10}"
+          let mobileTest = NSPredicate(format: "SELF MATCHES %@", mobileNumberRegEx)
+          return mobileTest.evaluate(with: self)
+      }
     
   
 }
