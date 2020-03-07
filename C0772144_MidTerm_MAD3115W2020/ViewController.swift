@@ -30,7 +30,11 @@ class ViewController: UIViewController {
             return
                   }
                   if username.isEmpty{
-                      showAlertBox(msg: "Please enter username")}
+                      showAlertBox(msg: "enter username")}
+        guard let password = txtPassord.text else{
+                      showAlertBox(msg: "enter password")
+               return
+               }
     }
     
     
