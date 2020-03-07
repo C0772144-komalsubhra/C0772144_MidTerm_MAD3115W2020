@@ -25,6 +25,9 @@ class ViewController: UIViewController {
            
        }
     @IBAction func loginBtn(_ sender: UIButton) {
+        guard let username = txtUsername.text else{
+                      showAlertBox(msg: "enter username")
+    }
     }
     
     
