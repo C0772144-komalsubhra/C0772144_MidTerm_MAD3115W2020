@@ -24,6 +24,21 @@ class NewCustomerViewController: UIViewController {
           //Singelton.getInstance().addCustomer(customer: <#T##Customer#>)
           // Do any additional setup after loading the view.
       }
-     
+      override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          
+      }
+      @IBAction func pickerChanged(_ sender: Any) {
+          let dateFormatter = DateFormatter()
+
+             //dateFormatter.dateStyle = DateFormatter.Style.long
+          dateFormatter.dateFormat = "dd/MM/yyyy"
+          
+          strDate = dateFormatter.string(from: datePicker.date)
+          //print(strDate)
+      }
+    
+
+    
 
 }
