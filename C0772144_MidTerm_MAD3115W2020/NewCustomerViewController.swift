@@ -24,61 +24,6 @@ class NewCustomerViewController: UIViewController {
           //Singelton.getInstance().addCustomer(customer: <#T##Customer#>)
           // Do any additional setup after loading the view.
       }
-      override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
-          
-      }
-      @IBAction func pickerChanged(_ sender: Any) {
-          let dateFormatter = DateFormatter()
-
-             //dateFormatter.dateStyle = DateFormatter.Style.long
-          dateFormatter.dateFormat = "dd/MM/yyyy"
-          
-          strDate = dateFormatter.string(from: datePicker.date)
-          //print(strDate)
-      }
-    
-
-      @IBAction func btnSave(_ sender: UIButton) {
-          validate()
-          let firstName = self.txtFirstName.text!
-          let lastName = self.txtLastName.text!
-          let email = self.txtEmailId.text!
-        let c=Customer(customerId: "fg", firstName: firstName, lastName: lastName,  emailAddress:email,Dob:strDate,gender: .FEMALE)
-          SingletonClass.getInstance().addCustomer(customer: c)
-      }
-      
-      func validate(){
-          guard let username = txtFirstName.text else{
-                 showAlertBox(msg: "Please enter firstname")
-          return
-          }
-          if username.isEmpty{
-              showAlertBox(msg: "Please enter firstname")}
-          
-          guard let lastname = txtLastName.text else{
-                 showAlertBox(msg: "Please enter lastname")
-          return
-          }
-          if lastname.isEmpty{
-              showAlertBox(msg: "Please enter lastname")}
-          
-          guard let email = txtEmailId.text else{
-                 showAlertBox(msg: "Please enter emailId")
-          return
-          }
-          if email.isEmpty{
-              showAlertBox(msg: "Please enter emailID")}
-          if email.isEmailValid(email:email)==false{
-              showAlertBox(msg: "Please enter valid emailID")
-          }
-      }
-           func showAlertBox(msg : String)  {
-              let alert = UIAlertController(title: "Error", message:
-                  msg, preferredStyle: .alert)
-              alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
-              
-              self.present(alert, animated: true)
-          }
+     
 
 }
